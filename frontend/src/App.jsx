@@ -5,19 +5,22 @@ function App() {
       <nav className="border-b border-slate-800">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
           <h1 className="text-xl font-bold text-cyan-400">
-            AI/ML Portfolio
+            Boreddygari Siddeswar Reddy
           </h1>
 
           <div className="hidden gap-6 text-sm text-slate-300 md:flex">
             <a href="#about" className="hover:text-cyan-400">
               About
             </a>
+
             <a href="#projects" className="hover:text-cyan-400">
               Projects
             </a>
+
             <a href="#skills" className="hover:text-cyan-400">
               Skills
             </a>
+
             <a href="#contact" className="hover:text-cyan-400">
               Contact
             </a>
@@ -28,7 +31,7 @@ function App() {
       {/* Hero */}
       <main>
         <section className="mx-auto flex min-h-[80vh] max-w-6xl items-center px-6 py-20">
-          <div className="max-w-3xl">
+          <div className="max-w-4xl">
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-cyan-400">
               AI / Machine Learning
             </p>
@@ -38,13 +41,14 @@ function App() {
               <span className="text-cyan-400">AI & ML.</span>
             </h2>
 
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-400">
-              Welcome to my portfolio. Explore my machine learning projects,
-              technical skills, experiments, and journey in artificial
-              intelligence.
+            <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-400">
+              I am an AI/ML professional passionate about machine learning,
+              data science, generative AI, and building practical solutions
+              for real-world problems.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
+              {/* View Projects */}
               <a
                 href="#projects"
                 className="rounded-lg bg-cyan-500 px-6 py-3 font-semibold text-slate-950 transition hover:bg-cyan-400"
@@ -52,11 +56,24 @@ function App() {
                 View Projects
               </a>
 
+              {/* GitHub */}
               <a
-                href="#contact"
+                href="https://github.com/SiddeswarReddyAIML"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="rounded-lg border border-slate-700 px-6 py-3 font-semibold text-white transition hover:border-cyan-400 hover:text-cyan-400"
               >
-                Contact Me
+                GitHub
+              </a>
+
+              {/* LinkedIn */}
+              <a
+                href="https://www.linkedin.com/in/boreddygarisiddeswarreddy/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-lg border border-slate-700 px-6 py-3 font-semibold text-white transition hover:border-cyan-400 hover:text-cyan-400"
+              >
+                LinkedIn
               </a>
             </div>
           </div>
@@ -69,17 +86,31 @@ function App() {
         >
           <div className="mx-auto max-w-6xl">
             <p className="text-sm font-semibold uppercase tracking-widest text-cyan-400">
-              About
+              About Me
             </p>
 
             <h2 className="mt-3 text-3xl font-bold">
-              Turning data into intelligent solutions.
+              From data to intelligent solutions.
             </h2>
 
             <p className="mt-6 max-w-3xl leading-8 text-slate-400">
-              I am passionate about artificial intelligence, machine learning,
-              data science, and building practical applications that solve
-              real-world problems.
+              I am an AI/ML professional with a strong interest in machine
+              learning, data science, artificial intelligence, and building
+              practical solutions for real-world problems.
+            </p>
+
+            <p className="mt-4 max-w-3xl leading-8 text-slate-400">
+              My technical interests include machine learning, deep learning,
+              natural language processing, generative AI, retrieval-augmented
+              generation, and MLOps. I enjoy taking problems from data
+              exploration and model development through to practical
+              applications.
+            </p>
+
+            <p className="mt-4 max-w-3xl leading-8 text-slate-400">
+              This portfolio documents my projects, experiments, technical
+              learning journey, and progression toward building production-ready
+              AI and machine learning systems.
             </p>
           </div>
         </section>
@@ -92,40 +123,54 @@ function App() {
             </p>
 
             <h2 className="mt-3 text-3xl font-bold">
-              Featured AI/ML Projects
+              AI/ML Project Journey
             </h2>
+
+            <p className="mt-4 max-w-3xl leading-7 text-slate-400">
+              A progression from foundational data analysis and machine
+              learning to generative AI and production MLOps systems.
+            </p>
 
             <div className="mt-10 grid gap-6 md:grid-cols-3">
               {[
                 {
-                  title: "Machine Learning Project",
+                  title: "House Price Prediction",
+                  category: "Machine Learning",
                   description:
-                    "A predictive machine learning application built with real-world data.",
+                    "A supervised learning project covering data preprocessing, exploratory analysis, feature engineering, model training, and evaluation.",
                 },
                 {
-                  title: "Computer Vision",
+                  title: "Credit Card Fraud Detection",
+                  category: "FinTech / Machine Learning",
                   description:
-                    "An AI application that analyzes and understands visual information.",
+                    "An imbalanced classification problem focused on detecting potentially fraudulent financial transactions.",
                 },
                 {
-                  title: "NLP Application",
+                  title: "RAG Document Assistant",
+                  category: "Generative AI",
                   description:
-                    "A natural language processing project for working with human language.",
+                    "A retrieval-augmented generation application designed to answer questions using information from uploaded documents.",
                 },
               ].map((project) => (
                 <article
                   key={project.title}
                   className="rounded-2xl border border-slate-800 bg-slate-900 p-6 transition hover:-translate-y-1 hover:border-cyan-500"
                 >
-                  <h3 className="text-xl font-bold">{project.title}</h3>
+                  <p className="text-sm font-semibold text-cyan-400">
+                    {project.category}
+                  </p>
+
+                  <h3 className="mt-3 text-xl font-bold">
+                    {project.title}
+                  </h3>
 
                   <p className="mt-4 leading-7 text-slate-400">
                     {project.description}
                   </p>
 
-                  <button className="mt-6 text-sm font-semibold text-cyan-400 hover:text-cyan-300">
-                    View Project →
-                  </button>
+                  <span className="mt-6 inline-block text-sm font-semibold text-slate-500">
+                    Coming soon →
+                  </span>
                 </article>
               ))}
             </div>
@@ -142,20 +187,30 @@ function App() {
               Skills
             </p>
 
-            <h2 className="mt-3 text-3xl font-bold">Technical Skills</h2>
+            <h2 className="mt-3 text-3xl font-bold">
+              Technical Skills
+            </h2>
 
             <div className="mt-8 flex flex-wrap gap-3">
               {[
                 "Python",
+                "SQL",
+                "Pandas",
+                "NumPy",
+                "Scikit-learn",
                 "Machine Learning",
                 "Deep Learning",
                 "TensorFlow",
                 "PyTorch",
-                "Scikit-learn",
-                "Pandas",
-                "NumPy",
-                "SQL",
+                "NLP",
+                "Generative AI",
+                "RAG",
+                "FastAPI",
                 "React",
+                "Git",
+                "GitHub",
+                "Docker",
+                "MLOps",
               ].map((skill) => (
                 <span
                   key={skill}
@@ -169,7 +224,10 @@ function App() {
         </section>
 
         {/* Contact */}
-        <section id="contact" className="px-6 py-24">
+        <section
+          id="contact"
+          className="border-t border-slate-800 px-6 py-24"
+        >
           <div className="mx-auto max-w-6xl">
             <p className="text-sm font-semibold uppercase tracking-widest text-cyan-400">
               Contact
@@ -179,17 +237,86 @@ function App() {
               Let's build something intelligent.
             </h2>
 
-            <p className="mt-6 text-slate-400">
-              Interested in collaborating or discussing an AI/ML project?
-              Get in touch.
+            <p className="mt-6 max-w-2xl leading-7 text-slate-400">
+              Interested in AI/ML, data science, generative AI, or intelligent
+              applications? Feel free to connect with me.
             </p>
+
+            {/* Contact Information */}
+            <div className="mt-8 grid gap-4 md:grid-cols-3">
+              {/* Email */}
+              <a
+                href="mailto:siddeswarreddyboreddygari@gmail.com"
+                className="rounded-xl border border-slate-800 bg-slate-900 p-5 transition hover:border-cyan-500"
+              >
+                <p className="text-sm text-slate-500">Email</p>
+
+                <p className="mt-2 break-all font-medium text-cyan-400">
+                  siddeswarreddyboreddygari@gmail.com
+                </p>
+              </a>
+
+              {/* Phone */}
+              <a
+                href="tel:+919390586429"
+                className="rounded-xl border border-slate-800 bg-slate-900 p-5 transition hover:border-cyan-500"
+              >
+                <p className="text-sm text-slate-500">Phone</p>
+
+                <p className="mt-2 font-medium text-cyan-400">
+                  +91 93905 86429
+                </p>
+              </a>
+
+              {/* LinkedIn */}
+              <a
+                href="https://www.linkedin.com/in/boreddygarisiddeswarreddy/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-xl border border-slate-800 bg-slate-900 p-5 transition hover:border-cyan-500"
+              >
+                <p className="text-sm text-slate-500">LinkedIn</p>
+
+                <p className="mt-2 font-medium text-cyan-400">
+                  Connect on LinkedIn →
+                </p>
+              </a>
+            </div>
+
+            {/* Social Links */}
+            <div className="mt-8 flex flex-wrap gap-4">
+              <a
+                href="https://github.com/SiddeswarReddyAIML"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-lg border border-slate-700 px-5 py-3 font-semibold text-white transition hover:border-cyan-400 hover:text-cyan-400"
+              >
+                GitHub →
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/boreddygarisiddeswarreddy/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-lg border border-slate-700 px-5 py-3 font-semibold text-white transition hover:border-cyan-400 hover:text-cyan-400"
+              >
+                LinkedIn →
+              </a>
+
+              <a
+                href="mailto:siddeswarreddyboreddygari@gmail.com"
+                className="rounded-lg bg-cyan-500 px-5 py-3 font-semibold text-slate-950 transition hover:bg-cyan-400"
+              >
+                Email Me →
+              </a>
+            </div>
           </div>
         </section>
       </main>
 
       {/* Footer */}
       <footer className="border-t border-slate-800 px-6 py-8 text-center text-sm text-slate-500">
-        © 2026 AI/ML Portfolio. All rights reserved.
+        © 2026 Boreddygari Siddeswar Reddy. All rights reserved.
       </footer>
     </div>
   );
