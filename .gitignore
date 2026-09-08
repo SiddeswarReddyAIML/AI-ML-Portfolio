@@ -58,3 +58,10 @@ Thumbs.db
 
 *.tmp
 *.temp
+
+# =========================
+# Project datasets
+# =========================
+
+projects/02-data-cleaning-eda/data/*.xlsx
+projects/02-data-cleaning-eda/data/*.xls
