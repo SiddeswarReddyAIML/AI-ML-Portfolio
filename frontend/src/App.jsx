@@ -147,6 +147,19 @@ function App() {
                   status: "Completed",
                 },
                 {
+                  title: "Online Retail Data Cleaning & Exploratory Data Analysis",
+                  category: "Project 02 • Data Analysis / EDA",
+                  description:
+                    "An end-to-end data cleaning and exploratory analysis project using 541,909 transaction records from the UCI Online Retail dataset. Investigates missing values, duplicates, returns, pricing anomalies, sales trends, product performance, geographic concentration, and customer behavior.",
+                  technologies:
+                    "Python • Pandas • NumPy • Matplotlib • Seaborn • Jupyter • Excel",
+                  result:
+                    "536,639 cleaned rows • 4,372 identifiable customers • UK: 84.01% of transaction value • Top 10% customers: 60.10% of identifiable value",
+                  github:
+                    "https://github.com/SiddeswarReddyAIML/AI-ML-Portfolio/tree/main/projects/02-data-cleaning-eda",
+                  status: "Completed",
+                },
+                {
                   title: "House Price Prediction",
                   category: "Project 03 • Machine Learning",
                   description:
