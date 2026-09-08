@@ -134,27 +134,46 @@ function App() {
             <div className="mt-10 grid gap-6 md:grid-cols-3">
               {[
                 {
-                  title: "House Price Prediction",
-                  category: "Machine Learning",
+                  title: "Credit Card Transaction Analysis & Fraud Detection",
+                  category: "Project 01 • FinTech / Machine Learning",
                   description:
-                    "A supervised learning project covering data preprocessing, exploratory analysis, feature engineering, model training, and evaluation.",
+                    "An end-to-end exploratory data analysis and baseline fraud detection project using 10,000 synthetic credit card transactions. Includes data quality analysis, feature engineering, Logistic Regression, threshold analysis, ROC-AUC, Precision-Recall analysis, and model persistence.",
+                  technologies:
+                    "Python • Pandas • NumPy • Scikit-learn • Matplotlib • Seaborn • Jupyter",
+                  result:
+                    "ROC-AUC: 0.9944 • Accuracy: 99.30% • Fraud Recall: 73.33% at 0.30 threshold",
+                  github:
+                    "https://github.com/SiddeswarReddyAIML/AI-ML-Portfolio/tree/main/projects/01-python-data-analysis",
+                  status: "Completed",
                 },
                 {
-                  title: "Credit Card Fraud Detection",
-                  category: "FinTech / Machine Learning",
+                  title: "House Price Prediction",
+                  category: "Project 03 • Machine Learning",
                   description:
-                    "An imbalanced classification problem focused on detecting potentially fraudulent financial transactions.",
+                    "A supervised learning project covering data preprocessing, exploratory analysis, feature engineering, model training, and evaluation.",
+                  technologies:
+                    "Python • Pandas • Scikit-learn",
+                  result:
+                    "Planned machine learning regression project",
+                  github: null,
+                  status: "Coming soon",
                 },
                 {
                   title: "RAG Document Assistant",
-                  category: "Generative AI",
+                  category: "Project 08 • Generative AI",
                   description:
                     "A retrieval-augmented generation application designed to answer questions using information from uploaded documents.",
+                  technologies:
+                    "Python • LLMs • Embeddings • Vector Database • RAG",
+                  result:
+                    "Planned generative AI project",
+                  github: null,
+                  status: "Coming soon",
                 },
               ].map((project) => (
                 <article
                   key={project.title}
-                  className="rounded-2xl border border-slate-800 bg-slate-900 p-6 transition hover:-translate-y-1 hover:border-cyan-500"
+                  className="flex flex-col rounded-2xl border border-slate-800 bg-slate-900 p-6 transition hover:-translate-y-1 hover:border-cyan-500"
                 >
                   <p className="text-sm font-semibold text-cyan-400">
                     {project.category}
@@ -168,9 +187,36 @@ function App() {
                     {project.description}
                   </p>
 
-                  <span className="mt-6 inline-block text-sm font-semibold text-slate-500">
-                    Coming soon →
-                  </span>
+                  <p className="mt-4 text-sm leading-6 text-slate-500">
+                    <span className="font-semibold text-slate-300">
+                      Technologies:
+                    </span>{" "}
+                    {project.technologies}
+                  </p>
+
+                  <p className="mt-4 text-sm leading-6 text-slate-500">
+                    <span className="font-semibold text-slate-300">
+                      Result:
+                    </span>{" "}
+                    {project.result}
+                  </p>
+
+                  <div className="mt-auto pt-6">
+                    {project.github ? (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block rounded-lg bg-cyan-500 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-cyan-400"
+                      >
+                        View Project on GitHub →
+                      </a>
+                    ) : (
+                      <span className="text-sm font-semibold text-slate-500">
+                        {project.status} →
+                      </span>
+                    )}
+                  </div>
                 </article>
               ))}
             </div>
