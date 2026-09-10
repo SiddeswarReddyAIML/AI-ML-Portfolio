@@ -8,3 +8,4 @@ openpyxl
 joblib
 fastapi
 uvicorn
+pytest
