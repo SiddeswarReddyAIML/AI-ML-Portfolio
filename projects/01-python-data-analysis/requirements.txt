@@ -6,3 +6,5 @@ scikit-learn
 jupyter
 openpyxl
 joblib
+fastapi
+uvicorn
