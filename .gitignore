@@ -64,4 +64,5 @@ Thumbs.db
 # =========================
 
 projects/02-data-cleaning-eda/data/*.xlsx
-projects/02-data-cleaning-eda/data/*.xls
+projects/02-data-cleaning-eda/data/*.xlsprojects/01-python-data-analysis/01_credit_card_data_analysis_backup.ipynb
+projects/01-python-data-analysis/01_credit_card_data_analysis_backup.ipynb
